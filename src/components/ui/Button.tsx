@@ -3,25 +3,24 @@ import type { ReactNode } from "react";
 interface ButtonProps {
   children: ReactNode;
   onClick: () => void;
-  key: number;
-  onMouseEnter: () => void;
-  onMouseLeave: () => void;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+  colors?: string;
 }
 
 export const Button = ({
   children,
   onClick,
-  key,
   onMouseEnter,
   onMouseLeave,
+  colors
 }: ButtonProps) => {
   return (
     <button
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      key={key}
       onClick={onClick}
-      className={`cursor-pointer text-neutral-100 rounded-lg w-10 flex justify-center mx-auto`}
+      className={`cursor-pointer text-neutral-100 w-10 flex justify-center mx-auto ${colors}`}
     >
       {children}
     </button>

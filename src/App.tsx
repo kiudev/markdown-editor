@@ -5,15 +5,15 @@ import { ToolsMenu } from "./components/ToolsMenu";
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-between min-w-screen min-h-screen bg-dark-color text-neutral-100">
+    <div className="flex flex-col items-center justify-between min-w-screen min-h-screen bg-dark-color text-neutral-100 gap-5 lg:gap-0">
       <header className="pt-10 w-full text-center">
         <h1 className="text-6xl font-bebas-neue">Markdown Editor</h1>
       </header>
 
-      <main className="flex flex-row items-center gap-5 min-w-full pl-10">
+      <main className="flex flex-row items-center gap-5 min-w-full lg:pl-10">
         <ToolsMenu />
 
-        <div className="flex flex-col lg:flex-row w-full gap-5 pl-32 pr-10">
+        <div className="flex flex-col lg:flex-row w-full gap-5 lg:pl-32 px-10">
           <TextEditor />
           <ResultArea />
         </div>

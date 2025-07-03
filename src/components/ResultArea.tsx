@@ -7,7 +7,7 @@ export const ResultArea = () => {
   const { value } = useReadme();
 
   return (
-    <div className="w-full h-96 lg:h-[700px] m-auto overflow-y-auto p-4 prose prose-invert max-w-none break-words markdown-body border-neutral-100/10 border-2 rounded-lg scrollbar-thumb-neutral-100 scrollbar scrollbar-track-transparent">
+    <div className="w-full h-96 lg:h-[700px] m-auto overflow-y-auto p-4 max-w-none break-words markdown-body border-neutral-100/10 border-2 rounded-lg scrollbar-thumb-neutral-100 scrollbar scrollbar-track-transparent prose prose-invert">
       <Markdown>{value}</Markdown>
     </div>
   );

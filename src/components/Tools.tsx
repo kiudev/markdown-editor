@@ -39,13 +39,13 @@ export const tools = [
   },
   {
     id: 5,
-    value: "[Link](https://remarkjs.github.io/react-markdown/)",
+    value: "[Link](https://github.com/kiudev)",
     icon: <Link />,
     tag: "Link",
   },
   {
     id: 6,
-    value: "![Image](http://url/a.png)",
+    value: "![Image](https://picsum.photos/200/300)",
     icon: <Image />,
     tag: "Image",
   },
