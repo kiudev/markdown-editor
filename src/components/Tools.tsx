@@ -10,6 +10,7 @@ import {
   ListOrdered,
   Minus,
   Code,
+  Braces
 } from "lucide-react";
 
 export const tools = [
@@ -75,15 +76,15 @@ export const tools = [
   },
   {
     id: 11,
-    value: "`Inline code` with backticks",
+    value: "`Inline code`",
     icon: <Code />,
     tag: "Inline code",
   },
   {
     id: 12,
     value:
-      "```\n# code block\nprint '3 backticks or'\nprint 'indent 4 spaces'\n```",
-    icon: <Link />,
+      "```\n{\n\t\"firstName\": \"John\",\n\t\"lastName\": \"Doe\"\n}\n```",
+    icon: <Braces />,
     tag: "Block code",
   },
 ];

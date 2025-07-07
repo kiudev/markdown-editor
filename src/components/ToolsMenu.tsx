@@ -25,7 +25,7 @@ export const ToolsMenu = () => {
   }, []);
 
   return (
-    <div className="flex flex-row-reverse fixed min-h-[700px]">
+    <div className="flex flex-row-reverse min-h-[620px]">
       {currentWidth <= 1024 && window.innerWidth <= 1024 && (
         <Button
           colors="bg-neutral-100/5 top-0 h-full"
@@ -40,7 +40,7 @@ export const ToolsMenu = () => {
       )}
 
       <aside
-        className={`bg-neutral-100/5 w-20 flex justify-between flex-col min-h-[700px] lg:rounded-full m-auto py-10 rounded-br-4xl ${
+        className={`bg-neutral-100/5 w-20 flex gap-6 justify-center flex-col lg:rounded-full m-auto py-10 rounded-br-4xl ${
           isHidden ? "hidden" : "flex"
         }`}
       >
@@ -54,7 +54,7 @@ export const ToolsMenu = () => {
             {tool.icon}
 
             {hover === tool.id && (
-              <div className="absolute left-20 -mt-2 w-fit whitespace-nowrap text-left bg-dark-color border-neutral-100/20 border-2 px-4 py-2 rounded-lg animate-in fade-in slide-in-from-left-10">
+              <div className="absolute left-28 -mt-2 w-fit whitespace-nowrap bg-dark-color border-neutral-100/20 border-2 px-4 py-2 rounded-lg animate-in fade-in slide-in-from-left-10">
                 {tool.tag}
               </div>
             )}

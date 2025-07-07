@@ -9,6 +9,8 @@ body {
 
 @theme {
   --color-dark-color: #0d1117;
+  --color-success-color: #22bb33;
+  --color-error-color: #bb2124;
   --font-bebas-neue: "Bebas Neue", sans-serif;
 }
 
