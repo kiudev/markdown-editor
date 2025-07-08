@@ -22,13 +22,17 @@ export const ToolsMenu = () => {
     window.addEventListener("resize", () => {
       setCurrentWidth(window.innerWidth);
     });
+
+    window.addEventListener("load", () => {
+      setCurrentWidth(window.innerWidth);
+    });
   }, []);
 
   return (
     <div className="flex flex-row-reverse min-h-[620px]">
       {currentWidth <= 1024 && window.innerWidth <= 1024 && (
         <Button
-          colors="bg-neutral-100/5 top-0 h-full"
+          colors="bg-dark-color border-2 border-neutral-100/10 lg:border-0 lg:bg-neutral-100/5 top-0 lg:h-full absolute rotate-90 lg:rotate-0 left-20 h-auto lg:static"
           onClick={() => setIsHidden(!isHidden)}
         >
           {!isHidden ? (
@@ -40,9 +44,9 @@ export const ToolsMenu = () => {
       )}
 
       <aside
-        className={`bg-neutral-100/5 w-20 flex gap-6 justify-center flex-col lg:rounded-full m-auto py-10 rounded-br-4xl ${
+        className={`bg-dark-color border-neutral-100/10 border-r-2 border-b-2 lg:border-0 lg:bg-neutral-100/5 w-20 flex gap-6 justify-center flex-col lg:rounded-full m-auto py-10 rounded-br-4xl ${
           isHidden ? "hidden" : "flex"
-        }`}
+        } fixed left-0 top-0 lg:static`}
       >
         {tools.map((tool) => (
           <Button
@@ -53,7 +57,7 @@ export const ToolsMenu = () => {
           >
             {tool.icon}
 
-            {hover === tool.id && (
+            {hover === tool.id && currentWidth >= 768 && (
               <div className="absolute left-28 -mt-2 w-fit whitespace-nowrap bg-dark-color border-neutral-100/20 border-2 px-4 py-2 rounded-lg animate-in fade-in slide-in-from-left-10">
                 {tool.tag}
               </div>

@@ -6,12 +6,12 @@ export const Header = () => {
   const { value, success, error, handleDownload, copyMarkdown } = useReadme();
 
   return (
-    <header className="pt-10 w-full flex justify-between pl-34 lg:pl-44 pr-10">
+    <header className="pt-10 w-full flex flex-col md:flex-row justify-between pl-10 lg:pl-44 pr-10 gap-5 lg:gap-0">
       <h1 className="text-6xl font-bebas-neue">Markdown Editor</h1>
 
-      <div className="flex flex-row-reverse items-center justify-center gap-3">
+      <div className="flex flex-row-reverse items-start justify-start lg:justify-center gap-3 mx-auto md:mx-0">
         <Button
-          colors={`text-neutral-100 w-fit p-3.5 rounded-full ${
+          colors={`text-neutral-100 w-fit p-5 lg:p-3.5 rounded-full ${
             success.downloadBtn
               ? "bg-success-color text-neutral-900"
               : error.downloadBtn
@@ -30,7 +30,7 @@ export const Header = () => {
         </Button>
 
         <Button
-          colors={`text-neutral-100 w-fit p-3.5 rounded-full ${
+          colors={`text-neutral-100 w-fit p-5 lg:p-3.5 rounded-full ${
             success.copyBtn
               ? "bg-success-color text-neutral-900"
               : error.copyBtn
